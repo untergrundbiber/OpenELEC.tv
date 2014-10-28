@@ -3,8 +3,8 @@ branches:
    - master
 
 before_script:
- - sudo apt-get -y -q update && sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" apt-get -y -q dist-upgrade && sudo apt-get -y -q autoremove && sudo apt-get -y -q autoclean
- - sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" apt-get install -y -q build-essential bash bc gcc g++ sed patch tar bzip2 gzip perl coreutils gawk texinfo gperf cvs zip unzip xutils diff xsltproc default-jre parted libxml-parser-perl 
+ - sudo apt-get -y -q update && sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" dist-upgrade && sudo apt-get -y -q autoremove && sudo apt-get -y -q autoclean
+ - sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" install build-essential bash bc gcc g++ sed patch tar bzip2 gzip perl coreutils gawk texinfo gperf cvs zip unzip xutils diff xsltproc default-jre parted libxml-parser-perl 
  - sudo dpkg-reconfigure -p critical dash
  - echo $SHELL
 
