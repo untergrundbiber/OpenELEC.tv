@@ -3,7 +3,7 @@ branches:
    - master
 
 before_script:
- - sudo apt-get -y -q update && apt-get -y -q dist-upgrade && apt-get -y -q autoremove && apt-get -y -q autoclean
+ - sudo apt-get -y -q update && sudo apt-get -y -q dist-upgrade && sudo apt-get -y -q autoremove && sudo apt-get -y -q autoclean
  - sudo apt-get install -y -q build-essential bash bc gcc g++ sed patch tar bzip2 gzip perl coreutils gawk texinfo gperf cvs zip unzip xutils diff xsltproc default-jre parted libxml-parser-perl 
  - sudo dpkg-reconfigure -p critical dash
  - echo $SHELL
